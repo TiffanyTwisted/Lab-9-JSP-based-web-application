@@ -17,17 +17,19 @@
 	<div style="font-family: 'Trebuchet',sans-serif; font-size: 30px; height: 53px; margin-left: 80px;">
 		Доска очень важных объявлений
 	</div>
+
 </div>
 <%-- Панель отображается если пользователь аутентифицирован --%>
 <c:if test="${sessionScope.authUser!=null}">
-	<div style="background-color: #ccc; padding: 5px">
-		<div style="float: right; margin-right: 5px" class="out">
-			 <a href="<c:url value="/doLogout.jsp" />" >Выйти<img src="img/out.png" height="20" width="20"/></a>
+	<div style="background-color: #ccc; padding: 5px" >
+		<div style="float: right; margin-right: 5px" >
+			 <a href="<c:url value="/doLogout.jsp" />" class="out"><span>Выйти</span><img src="https://cdn1.iconfinder.com/data/icons/feather-2/24/log-out-512.png" height="20" width="20"/></a>
 		</div>
-		<div style="float: right; margin-right: 5px;color:white">
+		<div style="float: right; margin-right: 5px" class="border">
 			 <a href="<c:url value="/cabinet.jsp" />">Вернуться в кабинет</a>
 		</div>
-		<div style="float: right; margin-right: 5px">[ <a href="<c:url value="/index.jsp" />">На главную</a>
+		<div style="float: right; margin-right: 5px" class="border">
+			<a href="<c:url value="/index.jsp" />">На главную</a>
 		</div>
 		Вы вошли как:
 		<c:out value="${sessionScope.authUser.name}" />
