@@ -1,0 +1,36 @@
+
+a {
+    text-decoration: none;
+}
+
+.out {
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    color: black;
+}
+.out div{
+    display: block;
+    overflow: hidden;
+    max-width: 0;
+    opacity: 0;
+    white-space: nowrap;
+    transition: .4s ease;
+}
+.out:after {
+    font-family: Linearicons-Free;
+    speak: none;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+}
+
+.out:hover div {
+    max-width: 150px;
+    opacity: 1;
+    margin-right: 6px;
+}
